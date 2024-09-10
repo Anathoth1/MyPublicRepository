@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(45deg, #ff6f61, #6bffb1, #ffdd57);
+    background-size: 400% 400%;
+    animation: gradientBackground 5s ease infinite;
+}
+
+.container {
+    text-align: center;
+    margin-top: 15%;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 4em;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: crazyTitle 2s infinite;
+}
+
+#crazyButton {
+    padding: 15px 30px;
+    background-color: #ff0080;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+#crazyButton:hover {
+    background-color: #00ccff;
+    transform: rotate(360deg) scale(1.2);
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+#surpriseText {
+    color: #fff;
+    font-size: 2.5em;
+    animation: surpriseAnim 2s infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes crazyTitle {
+    0%, 100% {
+        transform: scale(1);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        color: #ff007f;
+    }
+}
+
+@keyframes surpriseAnim {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/* Animação de rotação frenética do título */
+@keyframes frenzyRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animação de texto maluco */
+@keyframes frenzyText {
+    0% { transform: scale(1); color: #fff; }
+    100% { transform: scale(1.5); color: #ff007f; }
+}
+
+/* Animação de sacudir botão */
+@keyframes buttonShake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(10px, 5px); }
+    50% { transform: translate(-10px, -5px); }
+    75% { transform: translate(5px, 10px); }
+    100% { transform: translate(0, 0); }
+}
